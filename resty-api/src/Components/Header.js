@@ -3,7 +3,10 @@ import './Header.css';
 class Header extends React.Component {
     render() {
         return (
-            <div>
+            <div className = "navContainer">
+                <div className="navTitle">
+                <div>RESTy-Api</div>
+                </div>
                 <div className="nav" id="mynav">
                     <a href="#home" class="active">Home</a>
                     <a href="#contact">Contact</a>

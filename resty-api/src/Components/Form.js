@@ -3,8 +3,9 @@ import './Form.css';
 export default class Form extends React.Component {
     constructor(props) {
         super(props);
+        //talks to the React Component'this'
         this.state = {
-            //displayed value will be this.state.value
+            //displayed value will be this.state.url or method
             //displayed value will update as user types
             url: '',
             method: ''

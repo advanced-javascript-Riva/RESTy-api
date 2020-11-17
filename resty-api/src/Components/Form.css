@@ -5,19 +5,18 @@
     flex-direction: column;
 }
  
-
 #goButton {
     width: 100px;
     height: 30px;
-    border: solid 2px rgb(230, 222, 222);
-    background-color: rgba(25, 25, 25, 0.4);
-    color: rgb(230, 222, 222);
+    border: solid 2px rgb(141, 148, 172);
+    background-color: rgba(189, 38, 209, 0.4);
+    color: rgb(7, 7, 7);
     padding: 8px 20px;
     font-size: 20px;
     cursor: pointer;
 }
 
-.go-button:hover, .go-button:active{
+#go-button:hover, #go-button:active{
     border-color:rgb(31, 174, 231);
     color:rgb(31, 174, 231);
     background-color: black;
@@ -26,10 +25,18 @@
 .methodButtonContainer {
     display: flex;
     flex-direction: row;
-    border: solid 1px blue;
+    justify-content: center;
+    color:rgb(31, 174, 231);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .urlContainer {
     display: flex;
     flex-direction: row;
-    border: solid 1px green;
+    justify-content: center;
+    padding-top: 60px;
+    color:rgb(31, 174, 231);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  
 }
