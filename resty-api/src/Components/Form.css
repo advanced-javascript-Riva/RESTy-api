@@ -1,32 +1,42 @@
 .formSection{
     display: flex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(117, 110, 110);
     flex-direction: column;
 }
- 
+
+#urlBlock {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 40px;
+}
+
 #goButton {
     width: 100px;
-    height: 30px;
+    height: 40px;
     border: solid 2px rgb(141, 148, 172);
     background-color: rgba(189, 38, 209, 0.4);
-    color: rgb(7, 7, 7);
+    color:rgb(52, 116, 168);
     padding: 8px 20px;
     font-size: 20px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
-#go-button:hover, #go-button:active{
-    border-color:rgb(31, 174, 231);
-    color:rgb(31, 174, 231);
-    background-color: black;
+#goButton:hover{
+    border-color:rgb(91, 137, 206);
+    border: 4px;
+    font-weight: bold;
+    color:rgb(52, 116, 168);
+
 }
 
 .methodButtonContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color:rgb(31, 174, 231);
+    color:rgb(66, 136, 163);
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
@@ -35,7 +45,7 @@
     flex-direction: row;
     justify-content: center;
     padding-top: 60px;
-    color:rgb(31, 174, 231);
+    color:rgb(66, 136, 163);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   
