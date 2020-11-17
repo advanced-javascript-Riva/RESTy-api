@@ -12,7 +12,10 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 **Getting Started with Create React App**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The entry point for this application is `App.js`.
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The entry point for this application is `App.js`.
+
+- To create a React application, run `npx create-react-app (name of project here, all lowercase)`
+- To install it globally, run ‘npm install -g create-react-app’
 
 ## Available Scripts
 
