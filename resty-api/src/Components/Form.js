@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import '../Pages/Form.scss';
+import React  from 'react'
+import './Form.css';
 export default class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -7,38 +7,45 @@ export default class Form extends React.Component {
             //displayed value will be this.state.value
             //displayed value will update as user types
             url: '',
-            get: '',
-            post: '',
-            put:'',
-            delete: '',
+            method: ''
         }
         this.onSubmit = e => {
             console.log(this.state);
             e.preventDefault();
             
         }
-        //event handler will update state object
+        //Event handler will update state object
+        // Using handler for all the methods below
         this.changeHandler = e => {
-            this.setState({value: e.target.value});
+            // When some input calls changeHandler, get the name and value
+            // Use name as state prop I am setting, and set value to inputs value
+            this.setState({[e.target.name]: e.target.value});
         }
     }
     render() {
         return (
             <div className="formSection">
-            <form onSubmit ={this.submitHandler}>
-                <label for="url">Enter URL here</label>
-                <input type="text" value= {this.state.url} onChange= {this.changeHandler}/>
-                <input type="radio" id="formButton" name="get" value= {this.state.get} onChange= {this.changeHandler}/>
-                <label for="get">GET</label><br></br>
-                <input type="radio" id="formButton" name="formButton" value="post"/>
-                <label for="post">POST</label><br></br>
-                <input type="radio" id="formButton" name="formButton" value="put"/>
-                <label for="put">PUT</label><br></br>
-                <input type="radio" id="formButton" name="formButton" value="delete"/>
-                <label for="delete">DELETE</label><br></br>
-                <input type="submit" value="Submit"/>
-                <button onClick={()=> this.onSubmit()} id="goButton">Go</button>
+            <form>
+                <div className="urlContainer">
+                    <label for="url">Enter URL here</label>
+                    <input type="text" name="url" value= {this.state.url} onChange= {this.changeHandler}/>
+                    <button onClick={()=> this.onSubmit()} id="goButton">Go</button>
+                </div>
+                <div className="methodButtonContainer">
+                    <input type="radio" id="formButton" name="method" value='get' onChange= {this.changeHandler}/>
+                    <label for="get">GET</label><br></br>
+                    <input type="radio" id="formButton" name="method" value='post' onChange= {this.changeHandler}/>
+                    <label for="post">POST</label><br></br>
+                    <input type="radio" id="formButton" name="method" value="put" onChange= {this.changeHandler}/>
+                    <label for="put">PUT</label><br></br>
+                    <input type="radio" id="formButton" name="method" value="delete" onChange= {this.changeHandler}/>
+                    <label for="delete">DELETE</label><br></br>
+                </div>
             </form>
+            <div className= "displayedResults">
+                 url: {this.state.url}<br/>
+                 method: {this.state.method}
+            </div>
             </div>
        )
     }

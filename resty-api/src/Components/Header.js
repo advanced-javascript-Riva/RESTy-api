@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Pages/Header.scss';
+import './Header.css';
 class Header extends React.Component {
     render() {
         return (
-            <Header>
+            <div>
                 <div className="nav" id="mynav">
                     <a href="#home" class="active">Home</a>
                     <a href="#contact">Contact</a>
@@ -12,7 +12,7 @@ class Header extends React.Component {
                 <div className="burger-bar">
                     <i class="FaBars"></i>
                 </div>
-            </Header>
+            </div>
         )
     } 
 }
