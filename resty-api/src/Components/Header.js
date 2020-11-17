@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Header() {
     return (
@@ -9,7 +9,7 @@ export default function Header() {
                 <a href="#about">About</a>
             </div>
             <div className="burger-bar">
-                <i class="fas fa-bars"></i>
+                <i class="FaBars"></i>
             </div>
         </Header>
     )

@@ -1,0 +1,27 @@
+.formSection{
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(117, 110, 110);
+}
+ 
+#goButton {
+    width: 260px;
+    height: 60px;
+    border: solid 2px rgb(230, 222, 222);
+    background-color: rgba(25, 25, 25, 0.4);
+    color: rgb(230, 222, 222);
+    padding: 8px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.go-button:hover, .go-button:active{
+    border-color:rgb(31, 174, 231);
+    color:rgb(31, 174, 231);
+    background-color: black;
+}
+
+#formButton {
+flex-direction: row;
+
+}

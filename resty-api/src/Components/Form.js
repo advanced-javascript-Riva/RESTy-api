@@ -12,7 +12,8 @@ export default class Form extends React.Component {
             put:'',
             delete: '',
         }
-        this.submitHandler = e => {
+        this.onSubmit = e => {
+            console.log(this.state);
             e.preventDefault();
             
         }
@@ -23,10 +24,10 @@ export default class Form extends React.Component {
     }
     render() {
         return (
+            <div className="formSection">
             <form onSubmit ={this.submitHandler}>
                 <label for="url">Enter URL here</label>
                 <input type="text" value= {this.state.url} onChange= {this.changeHandler}/>
-                <button className="go-button">GO </button><br></br>
                 <input type="radio" id="formButton" name="get" value= {this.state.get} onChange= {this.changeHandler}/>
                 <label for="get">GET</label><br></br>
                 <input type="radio" id="formButton" name="formButton" value="post"/>
@@ -36,7 +37,9 @@ export default class Form extends React.Component {
                 <input type="radio" id="formButton" name="formButton" value="delete"/>
                 <label for="delete">DELETE</label><br></br>
                 <input type="submit" value="Submit"/>
+                <button onClick={()=> this.onSubmit()} id="goButton">Go</button>
             </form>
+            </div>
        )
     }
 }
