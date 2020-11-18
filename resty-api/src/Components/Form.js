@@ -21,16 +21,31 @@ export default class Form extends React.Component {
             // When some input calls changeHandler, get the name and value
             // Use name as state prop I am setting, and set value to inputs value
             this.setState({[e.target.name]: e.target.value});
+            console.log('setting state ' + e.target.name + 'toValue ' + e.target.value)
         }
     }
+
+  async fetchData() {
+    const url = this.state.url;
+    try {
+      const response = await fetch(url, {
+        method: this.state.method,
+        mode: 'no-cors',
+      })
+      console.log(response);
+      this.props.handleResults(response);
+    } catch (err) {
+        console.log(err);
+    }
+  }
     render() {
         return (
             <div className="formSection">
-            <form>
+            <div>
                 <div className="urlContainer">
                     <label for="url" id="urlBlock">Enter URL here</label>
                     <input type="text" name="url" value= {this.state.url} onChange= {this.changeHandler}/>
-                    <button onClick={()=> this.onSubmit()} id="goButton">Go</button>
+                    <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
                     <input type="radio" id="formButton" name="method" value='get' onChange= {this.changeHandler}/>
@@ -42,7 +57,7 @@ export default class Form extends React.Component {
                     <input type="radio" id="formButton" name="method" value="delete" onChange= {this.changeHandler}/>
                     <label for="delete">DELETE</label><br></br>
                 </div>
-            </form>
+            </div>
             <div className= "displayedResults">
                  url: {this.state.url}<br/>
                  method: {this.state.method}

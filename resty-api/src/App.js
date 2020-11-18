@@ -9,31 +9,26 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      people: [],
+      count: 0,
+      resultBody: undefined,
+      resultHeaders: undefined,
     }
   }
-  //executes at render of component
-  async componentDidMount() {
-   
-    const url = 'https://swapi.co/api/people'
-    try {
-      const response = await fetch(url, {
-        headers: {'Content-Type': 'application/json'}
-      });
-      const data = await response.json();
-      console.log(data);
-      this.setState({people: data[0]})
-    } catch (err) {
-      console.log(err);
-    }
-  }
-   
+  
+
+   handleResults = results => {
+     this.setState({
+       count: results.body.length,
+       resultBody: results.body,
+       resultHeaders: results.headers
+     });
+   }
   
   render() {
     return (
      <div className="App">
        <Header/>
-       <Form/>
+       <Form handleResults={this.handleResults}/>
       <Footer/>
      </div>
     );

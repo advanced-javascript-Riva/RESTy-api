@@ -5,6 +5,7 @@ class Header extends React.Component {
         return (
             <div className = "headerContainer">
                 <div className="navTitle">
+                <div className="stars, twinkling, clouds"></div>
                 <div>RESTy-Api</div>
                 </div>
                 </div>
