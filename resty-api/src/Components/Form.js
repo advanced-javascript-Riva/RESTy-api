@@ -22,7 +22,6 @@ export default class Form extends React.Component {
             // When some input calls changeHandler, get the name and value
             // Use name as state prop I am setting, and set value to inputs value
             this.setState({[e.target.name]: e.target.value});
-            console.log('setting state ' + e.target.name + 'toValue ' + e.target.value)
         }
     }
 

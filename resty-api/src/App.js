@@ -16,6 +16,7 @@ class App extends React.Component {
       resultHeaders: undefined,
     }
   }
+  //App.js will pass this function to Form, so Form can call it
    handleResults = results => {
      this.setState(results);
    }
@@ -26,6 +27,7 @@ class App extends React.Component {
     return (
      <div className="App">
        <Header/>
+       {/* handleResults is a prop that is passed to form*/}
        <Form handleResults={this.handleResults}/>
        <Result count={count} headers={resultHeaders} body={resultBody}/>
       <Footer/>
