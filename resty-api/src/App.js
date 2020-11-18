@@ -12,12 +12,20 @@ class App extends React.Component {
       people: [],
     }
   }
+  //executes at render of component
   async componentDidMount() {
+   
     const url = 'https://swapi.co/api/people'
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({person: data.results[0]})
-    console.log(data.results[0]);
+    try {
+      const response = await fetch(url, {
+        headers: {'Content-Type': 'application/json'}
+      });
+      const data = await response.json();
+      console.log(data);
+      this.setState({people: data[0]})
+    } catch (err) {
+      console.log(err);
+    }
   }
    
   
@@ -25,7 +33,7 @@ class App extends React.Component {
     return (
      <div className="App">
        <Header/>
-       <Form />
+       <Form/>
       <Footer/>
      </div>
     );
