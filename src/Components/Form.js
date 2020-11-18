@@ -8,7 +8,7 @@ export default class Form extends React.Component {
             // Displayed value will be this.state.url or method
             // Displayed value will update as user types
             // Hardcoding inital values so I don't have to keep filling it in
-            url: 'https://swapi.dev/api/people',
+            url: 'https://api-server-rd.herokuapp.com/products',
             method: 'GET'
         }
         this.onSubmit = e => {
@@ -30,6 +30,7 @@ export default class Form extends React.Component {
     try {
       const response = await fetch(url, {
         method: this.state.method,
+        isLoaded: true,
         mode: 'cors',
       })
       const result = await response.json();
@@ -43,6 +44,7 @@ export default class Form extends React.Component {
         console.log(err);
     }
   }
+  
     render() {
         return (
             <div className="formSection">

@@ -10,6 +10,8 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 **Phase 2:** In phase 2, I connect RESTy-api to live APIs, fetching and displaying remote data. The primary focus will be to service GET requests. Deploying the application to GitHub pages using a GitHub action which will publish the “build” to the gh-pages branch of your repository on all check-ins is the last part of phase 2.
 
+*Phase 3:** In this phase of the RESTy build, I add some more fidelity to the application, including a menu, history, and an “in-progress” spinner. In this phase, I can use all REST methods so that I can do more than just get data and see a “loading” indicator while RESTy is fetching data so that I know it’s working on my request.
+
 
 
 #### Usability: 
@@ -23,6 +25,16 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 **Additional Dependencies used:**
 - Install node sass, run `npm i --save node-sass@4`
+- Install react-bootstrap for spinner: npm i --save react-bootstrap bootstrap
+    - On `App.js` or `Index.js` import bootstrap: `import * as ReactBootStrap from 'react-bootstrap';`
+    - On `Index.html` add the script tag: 
+  
+      `<link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+  />`
 
 
 ## Available Scripts
