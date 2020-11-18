@@ -1,5 +1,6 @@
 {
   "name": "resty-api",
+  "homepage": "https://advanced-javascript-riva.github.io/RESTy-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
