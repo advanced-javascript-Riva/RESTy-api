@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
 .App {
   text-align: center;
-  background-image: url(https://www.desktopbackground.org/p/2013/12/31/694158_space-stars-backgrounds-wallpapers-zone_1920x1080_h.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(https://svs.gsfc.nasa.gov/vis/a010000/a010400/a010485/M31_Layered_UV_and_Optical.jpg);
+  /* background: no-repeat; */
 }
 
 .App-header {
-
   display: flex;
   flex-direction: column;
   align-items: center;

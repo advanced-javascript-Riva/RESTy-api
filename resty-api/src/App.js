@@ -2,6 +2,8 @@ import React  from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Form from './Components/Form';
+import Result from './Components/Result';
+
 import './App.css';
 
 
@@ -14,21 +16,18 @@ class App extends React.Component {
       resultHeaders: undefined,
     }
   }
-  
-
    handleResults = results => {
-     this.setState({
-       count: results.body.length,
-       resultBody: results.body,
-       resultHeaders: results.headers
-     });
+     this.setState(results);
    }
-  
+
   render() {
+    //using spread operator to set vars whose values equal properties of this.state
+    const {count, resultHeaders, resultBody} = this.state;
     return (
      <div className="App">
        <Header/>
        <Form handleResults={this.handleResults}/>
+       <Result count={count} headers={resultHeaders} body={resultBody}/>
       <Footer/>
      </div>
     );

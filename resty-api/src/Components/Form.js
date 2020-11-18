@@ -5,10 +5,11 @@ export default class Form extends React.Component {
         super(props);
         //talks to the React Component'this'
         this.state = {
-            //displayed value will be this.state.url or method
-            //displayed value will update as user types
-            url: '',
-            method: ''
+            // Displayed value will be this.state.url or method
+            // Displayed value will update as user types
+            // Hardcoding inital values so I don't have to keep filling it in
+            url: 'https://swapi.dev/api/people',
+            method: 'GET'
         }
         this.onSubmit = e => {
             console.log(this.state);
@@ -31,15 +32,14 @@ export default class Form extends React.Component {
       const response = await fetch(url, {
         method: this.state.method,
         mode: 'cors',
-        // credentials: 'same-origin',
-        headers: {
-           'Content-Type': 'application/json',
-        //    'Origin': 'localhost://',
-           'Access-Control-Allow-Origin': '*'
-        }
       })
-      console.log(response);
-      this.props.handleResults(response);
+      const result = await response.json();
+      const data = {
+        count: result.count,
+        resultBody: result.results,
+        resultHeaders: response.headers
+      }
+      this.props.handleResults(data);
     } catch (err) {
         console.log(err);
     }
