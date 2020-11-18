@@ -3,16 +3,11 @@ import './Header.css';
 class Header extends React.Component {
     render() {
         return (
-            <div>
-                <div className="nav" id="mynav">
-                    <a href="#home" class="active">Home</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+            <div className = "headerContainer">
+                <div className="navTitle">
+                <a className="link link--kukuri" href="#" data-letters="RESTy-Api">RESTy-Api</a>
                 </div>
-                <div className="burger-bar">
-                    <i class="FaBars"></i>
                 </div>
-            </div>
         )
     } 
 }

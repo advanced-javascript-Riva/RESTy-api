@@ -1,35 +1,52 @@
 .formSection{
     display: flex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(117, 110, 110);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(245, 239, 239);
     flex-direction: column;
 }
- 
+
+#urlBlock {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 40px;
+}
 
 #goButton {
     width: 100px;
-    height: 30px;
-    border: solid 2px rgb(230, 222, 222);
-    background-color: rgba(25, 25, 25, 0.4);
-    color: rgb(230, 222, 222);
+    height: 40px;
+    border: solid 2px rgb(5, 5, 5);
+    background-color: rgba(230, 79, 230, 0.897);
+    color:rgb(52, 116, 168);
     padding: 8px 20px;
     font-size: 20px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
-.go-button:hover, .go-button:active{
-    border-color:rgb(31, 174, 231);
-    color:rgb(31, 174, 231);
-    background-color: black;
+#goButton:hover{
+    border-color:rgb(91, 137, 206);
+    border: 4px;
+    font-weight: bold;
+    color:rgb(52, 116, 168);
+
 }
 
 .methodButtonContainer {
     display: flex;
     flex-direction: row;
-    border: solid 1px blue;
+    justify-content: center;
+    color:rgb(236, 236, 240);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .urlContainer {
     display: flex;
     flex-direction: row;
-    border: solid 1px green;
+    justify-content: center;
+    padding-top: 276px;
+    color: rgb(233, 33, 223);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  
 }
