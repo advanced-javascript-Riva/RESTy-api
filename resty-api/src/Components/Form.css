@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color:rgb(13, 13, 14);
+    color:rgb(236, 236, 240);
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
@@ -44,8 +44,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 60px;
-    color:rgb(3, 3, 3);
+    padding-top: 276px;
+    color: rgb(233, 33, 223);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   

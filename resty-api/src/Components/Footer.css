@@ -10,10 +10,9 @@
     background-size: cover;
     justify-content: center;
     align-items: center;
-    background-color: rgba(144, 198, 235, 0.945);
     position: bottom;
     bottom:0; left:0; right:0;
-    border-top: solid 2px rgb(180, 206, 216);
+    border-top: solid 2px rgb(227, 177, 240);
     margin-top: 60vh;
 }
 

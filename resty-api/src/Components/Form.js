@@ -30,7 +30,13 @@ export default class Form extends React.Component {
     try {
       const response = await fetch(url, {
         method: this.state.method,
-        mode: 'no-cors',
+        mode: 'cors',
+        // credentials: 'same-origin',
+        headers: {
+           'Content-Type': 'application/json',
+        //    'Origin': 'localhost://',
+           'Access-Control-Allow-Origin': '*'
+        }
       })
       console.log(response);
       this.props.handleResults(response);
@@ -48,13 +54,13 @@ export default class Form extends React.Component {
                     <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
-                    <input type="radio" id="formButton" name="method" value='get' onChange= {this.changeHandler}/>
+                    <input type="radio" id="formButton" name="method" value='GET' onChange= {this.changeHandler}/>
                     <label for="get">GET</label><br></br>
-                    <input type="radio" id="formButton" name="method" value='post' onChange= {this.changeHandler}/>
+                    <input type="radio" id="formButton" name="method" value='POST' onChange= {this.changeHandler}/>
                     <label for="post">POST</label><br></br>
-                    <input type="radio" id="formButton" name="method" value="put" onChange= {this.changeHandler}/>
+                    <input type="radio" id="formButton" name="method" value="PUT" onChange= {this.changeHandler}/>
                     <label for="put">PUT</label><br></br>
-                    <input type="radio" id="formButton" name="method" value="delete" onChange= {this.changeHandler}/>
+                    <input type="radio" id="formButton" name="method" value="DELETE" onChange= {this.changeHandler}/>
                     <label for="delete">DELETE</label><br></br>
                 </div>
             </div>

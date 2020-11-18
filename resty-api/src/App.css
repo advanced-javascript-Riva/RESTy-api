@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
 .App {
   text-align: center;
-  background-color: #484a4e;
+  background-image: url(https://www.desktopbackground.org/p/2013/12/31/694158_space-stars-backgrounds-wallpapers-zone_1920x1080_h.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-header {
