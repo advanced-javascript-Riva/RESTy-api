@@ -1,5 +1,7 @@
 import React  from 'react'
 import './Form.css';
+import * as ReactBootStrap from 'react-bootstrap';
+
 export default class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -8,8 +10,9 @@ export default class Form extends React.Component {
             // Displayed value will be this.state.url or method
             // Displayed value will update as user types
             // Hardcoding inital values so I don't have to keep filling it in
-            url: 'https://api-server-rd.herokuapp.com/products',
-            method: 'GET'
+            url: 'https://swapi.dev/api/people',
+            method: 'GET',
+            isLoading: false
         }
         this.onSubmit = e => {
             console.log(this.state);
@@ -26,11 +29,11 @@ export default class Form extends React.Component {
     }
 
   async fetchData() {
+    this.setState({ isLoading: true });
     const url = this.state.url;
     try {
       const response = await fetch(url, {
         method: this.state.method,
-        isLoaded: true,
         mode: 'cors',
       })
       const result = await response.json();
@@ -43,31 +46,38 @@ export default class Form extends React.Component {
     } catch (err) {
         console.log(err);
     }
+    this.setState({isLoading: false })
   }
-  
+ 
     render() {
         return (
             <div className="formSection">
             <div>
                 <div className="urlContainer">
-                    <label for="url" id="urlBlock">Enter URL here</label>
+                    <label htmlFor="url" id="urlBlock">Enter URL here</label>
                     <input type="text" name="url" value= {this.state.url} onChange= {this.changeHandler}/>
                     <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
                     <input type="radio" id="formButton" name="method" value='GET' onChange= {this.changeHandler}/>
-                    <label for="get">GET</label><br></br>
+                    <label htmlFor="get">GET</label><br></br>
                     <input type="radio" id="formButton" name="method" value='POST' onChange= {this.changeHandler}/>
-                    <label for="post">POST</label><br></br>
+                    <label htmlFor="post">POST</label><br></br>
                     <input type="radio" id="formButton" name="method" value="PUT" onChange= {this.changeHandler}/>
-                    <label for="put">PUT</label><br></br>
+                    <label htmlFor="put">PUT</label><br></br>
                     <input type="radio" id="formButton" name="method" value="DELETE" onChange= {this.changeHandler}/>
-                    <label for="delete">DELETE</label><br></br>
+                    <label htmlFor="delete">DELETE</label><br></br>
                 </div>
             </div>
             <div className= "displayedResults">
                  url: {this.state.url}<br/>
-                 method: {this.state.method}
+                 method: {this.state.method}<br/><br/>
+                 {this.state.isLoading === true && (
+                   // If isLoading is false, ternary will return false
+                   // If React gets a falsy value, it ignores it
+                   // If isLoading is true, ternary returns LAST truthy thingy (in this case, the html content)
+                 <ReactBootStrap.Spinner animation="border" variant="light"/>
+                 )}
             </div>
             </div>
        )

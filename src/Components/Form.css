@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     color: rgb(245, 239, 239);
     flex-direction: column;
+
 }
 
 #urlBlock {
@@ -14,7 +15,7 @@
 
 #goButton {
     width: 100px;
-    height: 40px;
+    height: 60px;
     border: solid 2px rgb(5, 5, 5);
     background-color: rgba(230, 79, 230, 0.897);
     color:rgb(52, 116, 168);
@@ -29,6 +30,8 @@
     border: 4px;
     font-weight: bold;
     color:rgb(52, 116, 168);
+    border: 6px solid rgb(238, 138, 233);
+    border-style: dotted;
 
 }
 
