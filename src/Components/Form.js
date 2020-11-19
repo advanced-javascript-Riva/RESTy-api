@@ -65,7 +65,7 @@ export default class Form extends React.Component {
             <div>
                 <div className="urlContainer">
                     <label htmlFor="url" id="urlBlock">Enter URL here</label>
-                    <input type="text" name="url" value= {this.state.url} onChange= {this.changeHandler}/>
+                    <input type="text" name="url" id="textBar" value= {this.state.url} onChange= {this.changeHandler}/>
                     <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
