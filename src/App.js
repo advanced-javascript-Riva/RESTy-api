@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Result from './Components/Result';
-
+import HistoryList from './Components/HistoryList'
 import './App.css';
 
 
@@ -20,17 +20,19 @@ class App extends React.Component {
    handleResults = results => {
      this.setState(results);
    }
-
   render() {
-    //using spread operator to set vars whose values equal properties of this.state
+    //using destructuring to set vars whose values equal properties of this.state
     const {count, resultHeaders, resultBody} = this.state;
     return (
      <div className="App">
        <Header/>
        {/* handleResults is a prop that is passed to form*/}
        <Form handleResults={this.handleResults}/>
+       <HistoryList/>
+       {this.state.resultBody !== undefined && (
        <Result count={count} headers={resultHeaders} body={resultBody}/>
-      <Footer/>
+       )}
+      <Footer/> 
      </div>
     );
   }
