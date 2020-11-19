@@ -15,6 +15,9 @@ export default class Form extends React.Component {
             isLoading: false
         }
         this.onSubmit = e => {
+          // const {url, method} = this.state;
+          // localStorage.setItem('url', url);
+          // localStorage.setItem('GET', method)
             console.log(this.state);
             e.preventDefault();
             
@@ -35,11 +38,12 @@ export default class Form extends React.Component {
       const response = await fetch(url, {
         method: this.state.method,
         mode: 'cors',
+        
       })
       const result = await response.json();
       const data = {
-        count: result.count,
-        resultBody: result.results,
+        // count: result.count,
+        resultBody: result,
         resultHeaders: response.headers
       }
       this.props.handleResults(data);
@@ -48,6 +52,12 @@ export default class Form extends React.Component {
     }
     this.setState({isLoading: false })
   }
+  
+  // componentDidMount() {
+  //   const url = localStorage.getItem('url' === 'true');
+  //   const method = 'GET' ? localStorage.getItem('method') : '';
+  //   this.setState({url, method});
+  // }
  
     render() {
         return (
