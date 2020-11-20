@@ -1,0 +1,18 @@
+.historyList {
+ display: flex;
+ flex-direction: row;
+ color: rgb(241, 238, 238);
+ justify-content: center;
+ padding-left: 60px;
+}
+
+#history {
+    color: pink;
+}
+
+.historyText {
+    font-size: 20px;
+    color: rgb(241, 238, 238);
+    display: flex;
+    text-align: center;
+}

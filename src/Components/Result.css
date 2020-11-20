@@ -1,6 +1,24 @@
 .json {
- background-color: whitesmoke;
+
  font-family: monospace;
  white-space: pre;
  text-align: left;
+ color: rgb(226, 80, 214);
 }
+
+.jsonSection {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid black;
+    width: 35vw;
+    height: 45em;
+    overflow:auto;
+    align-items: center;
+    background-color:rgb(34, 28, 87);
+    position: absolute;
+    right: 0;
+    left:0;
+}
+
+

@@ -11,9 +11,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
       resultBody: undefined,
       resultHeaders: undefined,
+      historyItems: []
     }
   }
   //App.js will pass this function to Form, so Form can call it
@@ -22,15 +22,15 @@ class App extends React.Component {
    }
   render() {
     //using destructuring to set vars whose values equal properties of this.state
-    const {count, resultHeaders, resultBody} = this.state;
+    const {count, resultHeaders, resultBody, historyItems} = this.state;
     return (
      <div className="App">
        <Header/>
        {/* handleResults is a prop that is passed to form*/}
        <Form handleResults={this.handleResults}/>
-       <HistoryList/>
+       <HistoryList history={ historyItems }/>
        {this.state.resultBody !== undefined && (
-       <Result count={count} headers={resultHeaders} body={resultBody}/>
+       <Result count={ count } headers={ resultHeaders } body={ resultBody } />
        )}
       <Footer/> 
      </div>

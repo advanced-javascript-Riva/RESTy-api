@@ -3,7 +3,7 @@ import './Result.css'
 export default class Result extends React.Component {
     render() {
         return (
-            <div>
+            <div className="jsonSection">
             <div className="headers json" >
                 {/*making json pretty*/}
                 {JSON.stringify(this.props.headers, null, 2)}

@@ -38,7 +38,6 @@ export default class Form extends React.Component {
       const response = await fetch(url, {
         method: this.state.method,
         mode: 'cors',
-        
       })
       const result = await response.json();
       const data = {
@@ -52,7 +51,6 @@ export default class Form extends React.Component {
     }
     this.setState({isLoading: false })
   }
-  
   // componentDidMount() {
   //   const url = localStorage.getItem('url' === 'true');
   //   const method = 'GET' ? localStorage.getItem('method') : '';
@@ -65,11 +63,12 @@ export default class Form extends React.Component {
             <div>
                 <div className="urlContainer">
                     <label htmlFor="url" id="urlBlock">Enter URL here</label>
-                    <input type="text" name="url" id="textBar" value= {this.state.url} onChange= {this.changeHandler}/>
+                    {/*removed value for input type from this.state.url*/}
+                    <input type="text" name="url" id="textBar"  onChange={this.changeHandler}/>
                     <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
-                    <input type="radio" id="formButton" name="method" value='GET' onChange= {this.changeHandler}/>
+                    <input type="radio" id="formButton" name="method" value='GET' onChange={this.changeHandler}/>
                     <label htmlFor="get">GET</label><br></br>
                     <input type="radio" id="formButton" name="method" value='POST' onChange= {this.changeHandler}/>
                     <label htmlFor="post">POST</label><br></br>
