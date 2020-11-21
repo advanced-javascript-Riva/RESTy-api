@@ -5,23 +5,22 @@ import * as ReactBootStrap from 'react-bootstrap';
 export default class Form extends React.Component {
     constructor(props) {
         super(props);
-        //talks to the React Component'this'
+        // Talks to the React Component'this'
         this.state = {
             // Displayed value will be this.state.url or method
             // Displayed value will update as user types
-            // Hardcoding inital values so I don't have to keep filling it in
             url: 'https://swapi.dev/api/people',
             method: 'GET',
             isLoading: false
         }
-        this.onSubmit = e => {
-          // const {url, method} = this.state;
-          // localStorage.setItem('url', url);
-          // localStorage.setItem('GET', method)
-            console.log(this.state);
-            e.preventDefault();
+        // this.onSubmit = e => {
+        //   // const {url, method} = this.state;
+        //   // localStorage.setItem('url', url);
+        //   // localStorage.setItem('GET', method)
+        //     console.log(this.state);
+        //     e.preventDefault();
             
-        }
+        // }
         //Event handler will update state object
         // Using handler for all the methods below
         this.changeHandler = e => {
@@ -41,9 +40,10 @@ export default class Form extends React.Component {
       })
       const result = await response.json();
       const data = {
-        // count: result.count,
         resultBody: result,
-        resultHeaders: response.headers
+        resultHeaders: response.headers,
+        url: this.state.url,
+        method: this.state.method
       }
       this.props.handleResults(data);
     } catch (err) {
