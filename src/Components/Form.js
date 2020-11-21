@@ -13,14 +13,6 @@ export default class Form extends React.Component {
             method: 'GET',
             isLoading: false
         }
-        // this.onSubmit = e => {
-        //   // const {url, method} = this.state;
-        //   // localStorage.setItem('url', url);
-        //   // localStorage.setItem('GET', method)
-        //     console.log(this.state);
-        //     e.preventDefault();
-            
-        // }
         //Event handler will update state object
         // Using handler for all the methods below
         this.changeHandler = e => {
@@ -51,12 +43,6 @@ export default class Form extends React.Component {
     }
     this.setState({isLoading: false })
   }
-  // componentDidMount() {
-  //   const url = localStorage.getItem('url' === 'true');
-  //   const method = 'GET' ? localStorage.getItem('method') : '';
-  //   this.setState({url, method});
-  // }
- 
     render() {
         return (
             <div className="formSection">

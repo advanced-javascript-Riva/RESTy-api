@@ -7,7 +7,7 @@ class HistoryList extends React.Component {
             <div className="historyList">
                 <div className="historyText" id="history">Your History</div>
                 <ul>
-                    {this.props.history.map((item, i) => {
+                    {this.props.history && this.props.history.map((item, i) => {
                         // When iterating over a list, a key is needed so React can track items
                         return <li key={i}> {item.method} {item.url}</li>
                     })}

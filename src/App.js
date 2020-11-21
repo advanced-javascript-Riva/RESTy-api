@@ -16,6 +16,11 @@ class App extends React.Component {
       historyItems: []
     }
   }
+
+  // Called when the this component renders for the first time
+  componentDidMount() {
+    this.getHistoryFromStorage();
+  }
   // App.js will pass this function to Form, so Form can call it
   // React only rerenders component if props or state change
   // this.setState is setting new values to the App component's state
@@ -27,6 +32,8 @@ class App extends React.Component {
        result:data.resultBody
      }
      this.state.historyItems.push(historyEntry);
+     // Saving history to localStorage
+     this.saveHistoryToStorage(this.state.historyItems);
 
      this.setState({
        // Telling React that there is a new change and it needs to render again
@@ -36,6 +43,15 @@ class App extends React.Component {
      });
    }
 
+   saveHistoryToStorage(historyItems) {
+      localStorage.setItem('historyItems', JSON.stringify(historyItems));
+  }
+  getHistoryFromStorage() {
+    const historyItems = localStorage.getItem('historyItems');
+    if(historyItems !== null) {
+      this.setState({historyItems: JSON.parse(historyItems)});
+    }
+  }
   render() {
     // Using destructuring to set vars whose values equal properties of this.state
     const {count, resultHeaders, resultBody, historyItems} = this.state;
