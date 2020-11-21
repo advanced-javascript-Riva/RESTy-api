@@ -1,21 +1,20 @@
 .json {
-
  font-family: monospace;
  white-space: pre;
  text-align: left;
- color: rgb(226, 80, 214);
+ color: rgb(230, 220, 229);
 }
 
 .jsonSection {
+    border: 2px solid purple;
+    border-radius: 20px;
+    background-color:rgb(131, 55, 182);
     display:flex;
     flex-direction: column;
     justify-content: center;
-    border: 3px solid black;
-    width: 35vw;
-    height: 45em;
+    height: 30em;
     overflow:auto;
     align-items: center;
-    background-color:rgb(34, 28, 87);
     right: 0;
     left:0;
 }

@@ -50,18 +50,29 @@
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
-    padding-left: 60px;
+    padding-left: 120px;
+    padding-top: 20px;
+}
 
-    
+.methodButtonContainer label {
+    padding-right:20px;
 }
 
 .urlContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 276px;
+    padding-top: 200px;
     color: rgb(233, 33, 223);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   
+}
+
+.displayedResults {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(214, 27, 214);
+    padding-left: 80px;
+     
 }

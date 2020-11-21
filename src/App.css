@@ -3,7 +3,6 @@
 .App {
   text-align: center;
   background-image: url(https://svs.gsfc.nasa.gov/vis/a010000/a010400/a010485/M31_Layered_UV_and_Optical.jpg);
-  background-size: 150% 150%;
   background-position: center;
 }
 
@@ -16,4 +15,8 @@
  
 }
 
-
+.resultsContainer {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}

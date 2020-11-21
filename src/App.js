@@ -60,10 +60,12 @@ class App extends React.Component {
        <Header/>
        {/* handleResults is a prop that is passed to form*/}
        <Form handleResults={this.handleResults}/>
+       <div className="resultsContainer">
        <HistoryList history={ historyItems }/>
        {this.state.resultBody !== undefined && (
        <Result count={ count } headers={ resultHeaders } body={ resultBody } />
        )}
+       </div>
       <Footer/> 
      </div>
     );

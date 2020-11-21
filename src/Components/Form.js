@@ -54,19 +54,19 @@ export default class Form extends React.Component {
                     <button onClick={()=> this.fetchData()} id="goButton">Go</button>
                 </div>
                 <div className="methodButtonContainer">
-                    <input type="radio" id="formButton" name="method" value='GET' onChange={this.changeHandler}/>
+                    <input type="radio" className="formButton" name="method" value='GET' onChange={this.changeHandler}/>
                     <label htmlFor="get">GET</label><br></br>
-                    <input type="radio" id="formButton" name="method" value='POST' onChange= {this.changeHandler}/>
+                    <input type="radio" className="formButton" name="method" value='POST' onChange= {this.changeHandler}/>
                     <label htmlFor="post">POST</label><br></br>
-                    <input type="radio" id="formButton" name="method" value="PUT" onChange= {this.changeHandler}/>
+                    <input type="radio" className="formButton" name="method" value="PUT" onChange= {this.changeHandler}/>
                     <label htmlFor="put">PUT</label><br></br>
-                    <input type="radio" id="formButton" name="method" value="DELETE" onChange= {this.changeHandler}/>
+                    <input type="radio" className="formButton" name="method" value="DELETE" onChange= {this.changeHandler}/>
                     <label htmlFor="delete">DELETE</label><br></br>
                 </div>
             </div>
             <div className= "displayedResults">
-                 url: {this.state.url}<br/>
-                 method: {this.state.method}<br/><br/>
+                 URL: {this.state.url}<br/>
+                 METHOD: {this.state.method}<br/><br/>
                  {this.state.isLoading === true && (
                    // If isLoading is false, ternary will return false
                    // If React gets a falsy value, it ignores it
