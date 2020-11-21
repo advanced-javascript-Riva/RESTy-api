@@ -4,6 +4,12 @@ import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Result from './Components/Result';
 import HistoryList from './Components/HistoryList'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
 
 

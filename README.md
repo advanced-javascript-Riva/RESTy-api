@@ -12,8 +12,9 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 **Phase 3:** In this phase of the RESTy build, I add some more fidelity to the application, including a menu, history, and an “in-progress” spinner. In this phase, I can use all REST methods so that I can do more than just get data and see a “loading” indicator while RESTy is fetching data so that I know it’s working on my request.
 
+**Phase 4:**In this final phase of the RESTy build, I add some more fidelity to the application, including a menu with a more detailed view of history, as well as an about us page. Using React's `BrowserRouter` libary, I am able to conditionally show child components based on the browser route.
 
-#### Usability: 
+#### Usability: To use RESTy-Api, clone the repo and do an `npm i`. This will install `create-react-app` and all other dependencies needed for the project to run. As listed below, to start the app, run `npm start ` in the project directory.
 
 **Getting Started with Create React App**
 
@@ -35,6 +36,17 @@ This first phase involves entering the URL to a REST API and selecting the REST 
     crossorigin="anonymous"
   />`
 
+- Install react-router-dom, run `npm i --save react-router-dom`
+- Import the Browser Router object: 
+  
+  ```
+  import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+```
 
 ## Available Scripts
 
