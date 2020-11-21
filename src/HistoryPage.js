@@ -1,6 +1,6 @@
-import React from 'React';
+import React from 'react';
 import HistoryList from './Components/HistoryList';
-import '../HistoryPage.css';
+import './HistoryPage.css';
 
 export default class HistoryPage extends React.Component {
     render() {

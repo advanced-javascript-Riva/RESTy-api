@@ -1,5 +1,5 @@
 import React  from 'react';
-import '../HelpPage.css';
+import './HelpPage.css';
 
 export default class HelpPage extends React.Component {
     render() {
