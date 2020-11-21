@@ -1,0 +1,27 @@
+.historyList {
+ display: flex;
+ flex-direction: column;
+ color: rgb(241, 238, 238);
+ justify-content: center;
+ font-family: monospace;
+ font-weight: bold;
+ font-size: 15;
+ width: 420px;
+}
+
+.historyItems {
+    color: rgb(230, 220, 229);
+ border: 2px solid purple;
+ border-radius: 20px;
+ background-color:rgba(131, 55, 182, 0.473);
+}
+
+.historyText {
+    font-size: 26px;
+    color: rgb(241, 238, 238);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(214, 27, 214);
+}
