@@ -5,17 +5,14 @@
     height: 80px;
     width: 100vw; 
     display: flex;
-    background-image: url(https://i.pinimg.com/originals/a4/50/60/a450600099fc4e8f01716bbc478b6513.jpg);
+    background-color:rgba(110, 58, 145, 0.267);
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
     align-items: center;
     position: bottom;
     bottom:0; left:0; right:0;
-    border-top: solid 2px rgb(227, 177, 240);
+    border-top: solid 2px  purple;
     margin-top: 60vh;
 }
 
-.footer {
-   
-}
