@@ -13,6 +13,8 @@ class Header extends React.Component {
                 <div className="navTitle">
                     <a className="link link--kukuri" href="#" data-letters="RESTy-Api">RESTy-Api</a>
                 </div>
+                <div className="navLinks">
+                </div>
                 </div>
         )
     } 
