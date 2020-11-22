@@ -49,9 +49,11 @@ export default class Form extends React.Component {
             <div>
                 <div className="urlContainer">
                     <label htmlFor="url" id="urlBlock">Enter URL here</label>
-                    {/*removed value for input type from this.state.url*/}
-                    <input type="text" name="url" id="textBar"  onChange={this.changeHandler}/>
-                    <button onClick={()=> this.fetchData()} id="goButton">Go</button>
+                    <div className="urlInputHere">
+                      {/*removed value for input type from this.state.url*/}
+                      <input type="text" name="url" id="textBar"  onChange={this.changeHandler}/>
+                      <button onClick={()=> this.fetchData()} id="goButton">Go</button>
+                    </div>
                 </div>
                 <div className="methodButtonContainer">
                     <input type="radio" className="formButton" name="method" value='GET' onChange={this.changeHandler}/>

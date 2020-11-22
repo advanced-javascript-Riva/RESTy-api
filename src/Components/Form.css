@@ -3,7 +3,6 @@
     font-family: 'Roboto', sans-serif;
     color: rgb(245, 239, 239);
     flex-direction: column;
-
 }
 
 #urlBlock {
@@ -50,7 +49,6 @@
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
-    padding-left: 120px;
     padding-top: 20px;
 }
 
@@ -58,21 +56,25 @@
     padding-right:20px;
 }
 
-.urlContainer {
+.urlInputHere {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 200px;
+}
+
+.urlContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
     color: rgb(233, 33, 223);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-  
+    align-items: center;
+    justify-content:center;
 }
 
 .displayedResults {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: rgb(214, 27, 214);
-    padding-left: 80px;
-     
+    color: rgb(214, 27, 214);  
 }

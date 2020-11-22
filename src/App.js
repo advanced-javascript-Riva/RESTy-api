@@ -4,6 +4,16 @@ import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Result from './Components/Result';
 import HistoryList from './Components/HistoryList'
+import HistoryPage from './HistoryPage';
+import HelpPage from './HelpPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
+
 import './App.css';
 
 
@@ -56,18 +66,30 @@ class App extends React.Component {
     // Using destructuring to set vars whose values equal properties of this.state
     const {count, resultHeaders, resultBody, historyItems} = this.state;
     return (
+      <Router>
      <div className="App">
        <Header/>
-       {/* handleResults is a prop that is passed to form*/}
-       <Form handleResults={this.handleResults}/>
-       <div className="resultsContainer">
-       <HistoryList history={ historyItems }/>
-       {this.state.resultBody !== undefined && (
-       <Result count={ count } headers={ resultHeaders } body={ resultBody } />
-       )}
-       </div>
+       <Switch>
+          <Route path="/history">
+            <HistoryPage history={ historyItems } />
+          </Route>
+          <Route path="/help">
+            <HelpPage/>
+          </Route>
+          <Route>
+            {/* handleResults is a prop that is passed to form*/}
+            <Form handleResults={this.handleResults}/>
+            <div className="resultsContainer">
+            <HistoryList history={ historyItems }/>
+            {this.state.resultBody !== undefined && (
+            <Result count={ count } headers={ resultHeaders } body={ resultBody } />
+          )}
+          </div>
+       </Route>
+       </Switch>
       <Footer/> 
      </div>
+     </Router>
     );
   }
 }

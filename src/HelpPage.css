@@ -1,0 +1,8 @@
+.helpText {
+   font-family: 'Roboto', sans-serif;
+   color: whitesmoke;
+   text-shadow: 2px 2px 1px rgba(99, 6, 99, 0.897);
+   font-size: 18px;
+   border-radius:20px;
+   margin-top:80px;
+}
