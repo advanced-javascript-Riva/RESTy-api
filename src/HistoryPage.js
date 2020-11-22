@@ -9,6 +9,7 @@ export default class HistoryPage extends React.Component {
                 <div className="historyPageText">
                     History
                 </div>
+                <HistoryList history={this.props.history}/>
             </div>
         )
     }

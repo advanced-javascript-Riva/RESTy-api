@@ -21,7 +21,7 @@
 
 .link--kukuri {
 	text-transform: uppercase;
-	font-weight: 200;
+	font-weight: 900;
 	overflow: hidden;
 	line-height: 0.75;
 	color: rgba(182, 88, 182, 0.897);
@@ -95,4 +95,5 @@
 .navLinks a {
 	color: whitesmoke;
 	margin:30px;
+	font-weight: 900;
 }
