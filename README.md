@@ -4,7 +4,7 @@
 
 ### Project Overview: A create-react-website that displays results from API call
 
-**Phase 1:** My goal is to setup the basic scaffolding of the application, with intent being to add more functionality to the system as I go. This initial build sets up the file structure so that I can progressively build this application in a scalable manner.**
+**Phase 1:** My goal is to setup the basic scaffolding of the application, with intent being to add more functionality to the system as I go. This initial build sets up the file structure so that I can progressively build this application in a scalable manner.
 
 This first phase involves entering the URL to a REST API and selecting the REST method to use to access it. Providing a visual confirmation that  entries and selections are valid is another goal so I know that the application will be able to fetch the API data that I’ve requested.
 
