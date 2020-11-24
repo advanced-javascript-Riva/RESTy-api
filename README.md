@@ -68,4 +68,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 **UML:**
 
-![UML](resty-uml.png)
+![UML](uml.png)
