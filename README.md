@@ -38,15 +38,13 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 - Install react-router-dom, run `npm i --save react-router-dom`
 - Import the Browser Router object:
-  
-  ```
-  import {
+- 
+`import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
-} from "react-router-dom";
-```
+} from "react-router-dom"`;
 
 
 ## Available Scripts
@@ -68,4 +66,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 **UML:**
 
-![UML](uml.png)
+![uml](uml.png)
