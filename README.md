@@ -37,7 +37,7 @@ This first phase involves entering the URL to a REST API and selecting the REST 
   />`
 
 - Install react-router-dom, run `npm i --save react-router-dom`
-- Import the Browser Router object: 
+- Import the Browser Router object:
   
   ```
   import {
@@ -47,6 +47,7 @@ This first phase involves entering the URL to a REST API and selecting the REST 
   Link
 } from "react-router-dom";
 ```
+
 
 ## Available Scripts
 
@@ -65,7 +66,6 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+**UML:**
 
-#### UML:
-
-![uml](resty-uml.png)
+![UML](resty-uml.png)
