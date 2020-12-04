@@ -12,7 +12,7 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 
 **Phase 3:** In this phase of the RESTy build, I add some more fidelity to the application, including a menu, history, and an “in-progress” spinner. In this phase, I can use all REST methods so that I can do more than just get data and see a “loading” indicator while RESTy is fetching data so that I know it’s working on my request.
 
-**Phase 4:** In this final phase of the RESTy build, I add some more fidelity to the application, including a menu with a more detailed view of history, as well as an about us page. Using React's `BrowserRouter` libary, I am able to conditionally show child components based on the browser route.
+**Phase 4:** In this final phase of the RESTy build, I add some more fidelity to the application, including a menu with a more detailed view of history, as well as an about us page. Using React's `BrowserRouter` library, I am able to conditionally show child components based on the browser route.
 
 #### Usability: To use RESTy-Api, clone the repo and do an `npm i`. This will install `create-react-app` and all other dependencies needed for the project to run. As listed below, to start the app, run `npm start ` in the project directory.
 
@@ -26,25 +26,20 @@ This first phase involves entering the URL to a REST API and selecting the REST 
 **Additional Dependencies used:**
 - Install node sass, run `npm i --save node-sass@4`
 - Install react-bootstrap for spinner: `npm i --save react-bootstrap bootstrap`
-    - On `App.js` or `Index.js` import bootstrap: `import * as ReactBootStrap from 'react-bootstrap';`
-    - On `Index.html` add the script tag: 
-    - 
-      `<link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-    crossorigin="anonymous"
-  />`
-
+- On `App.js` or `Index.js` import bootstrap: `import * as ReactBootStrap from 'react-bootstrap';`
 - Install react-router-dom, run `npm i --save react-router-dom`
 - Import the Browser Router object:
-- 
+  
 `import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom"`;
+
+### UML:
+
+![uml](uml.png)
 
 
 ## Available Scripts
@@ -64,6 +59,3 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**UML:**
-
-![uml](uml.png)
